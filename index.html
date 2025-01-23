@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BMI Calculator</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  
+</head>
+<body>
+  <div class="container">
+    <h1> BMI Calculator</h1>
+    <p class="instructions">
+      Enter your weight and height to calculate your Body Mass Index (BMI). You can choose your height in either centimeters or feet/inches. 
+      Your BMI will help determine your weight category, and a chart will visualize your result.
+    </p>
+
+
+    <div class="form-group">
+      <label for="weight">Weight (kg):</label>
+      <input type="number" id="weight" placeholder="Enter weight in kg">
+    </div>
+
+    <div class="form-group">
+      <label for="height">Height:</label>
+      <div class="height-input">
+        <input type="number" id="height" placeholder="Enter height">
+        <select id="height-unit">
+          <option value="cm">cm</option>
+          <option value="feet">feet/inches</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="buttons">
+      <button id="calculate-btn">Calculate BMI</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <div class="color-instructions">
+        
+        <ul>
+          <li><span style="background-color: #00bfff;"></span> Underweight</li>
+          <li><span style="background-color: #00ff00;"></span> Normal weight</li>
+          <li><span style="background-color: #ffdd57;"></span> Overweight</li>
+          <li><span style="background-color: #ff6347;"></span> Obesity</li>
+        </ul>
+      </div>      
+      
+    <p id="result"></p>
+    <canvas id="bmi-chart" width="400" height="200"></canvas>
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+
